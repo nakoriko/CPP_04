@@ -1,0 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nakoriko <nakoriko@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/24 00:12:12 by nakoriko          #+#    #+#             */
+/*   Updated: 2025/07/24 09:57:55 by nakoriko         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
+
+#include <iostream>
+#include <string>
+
+class Brain {
+private:
+	std::string ideas[100];
+public:
+	Brain();
+	Brain(const Brain& other);
+	Brain& operator=(const Brain& other);
+	~Brain();
+
+	std::string getIdea(int index) const;
+	void setIdea(int index, const std::string& idea);
+
+	// getterx/setters?
+};
+
+#endif
